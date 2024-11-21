@@ -69,17 +69,16 @@ class EnemyBoard:
         for i in range(len(self.board)):
             print(f"{i} {self.board[i]}")
 
+###Testing Board Creation
+# again = True
+# while again:
+#     test = EnemyBoard()
+#     test.print_board()
+#     print(test.boat2_pos)
+#     print(test.boat3_pos)
+#     print(test.boat4_pos)
+#     print(test.boat5_pos)
+#     response = input("Again? ")
+#     if response != "y":
+#         again = False
 
-again = True
-while again:
-    test = EnemyBoard()
-    test.print_board()
-    print(test.boat2_pos)
-    print(test.boat3_pos)
-    print(test.boat4_pos)
-    print(test.boat5_pos)
-    response = input("Again? ")
-    if response != "y":
-        again = False
-
-        
