@@ -4,18 +4,41 @@ class EnemyBoard:
     def __init__(self) -> None:
         self.board = []
         self.boat2_pos = []
+        self.boat2_hits = 0
         self.boat3_pos = []
+        self.boat3_hits = 0
         self.boat4_pos = []
+        self.boat4_hits = 0
         self.boat5_pos = []
+        self.boat5_hits = 0
         self.directions = [[0,1], [0,-1], [1, 0], [-1, 0]]
         self.all_boats_pos = []
         self.create_board()
         self.place_boats()
+        self.enemy_attempts = []
+
+    def taking_a_hit(self, coor):
+        #Hitting an enemy's board, returns True it there is a hit, returns False if it is a miss.
+        self.enemy_attempts.append(coor)
+        if coor in self.all_boats_pos:
+            self.board[coor[0]][coor[1]] = "X"
+            if coor in self.boat2_pos:
+                self.boat2_hits += 1
+            elif coor in self.boat3_pos:
+                self.boat3_hits += 1
+            elif coor in self.boat4_pos:
+                self.boat4_hits += 1
+            elif coor in self.boat5_pos:
+                self.boat5_hits += 1
+            return True
+        else:
+            return False
 
     def create_board(self):
         #Creating the board
         for _ in range(10):
             self.board.append([0]*10)
+
     def place_boats(self):
         #Get random starting position
         def get_start():
