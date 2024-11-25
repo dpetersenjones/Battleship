@@ -33,15 +33,15 @@ class EnemyBoard:
                     return [True, True]
             elif coor in self.boat3_pos:
                 self.boat3_hits += 1
-                if self.boat3_hits == 2:
+                if self.boat3_hits == 3:
                     return [True, True]
             elif coor in self.boat4_pos:
                 self.boat4_hits += 1
-                if self.boat4_hits == 2:
+                if self.boat4_hits == 4:
                     return [True, True]
             elif coor in self.boat5_pos:
                 self.boat5_hits += 1
-                if self.boat5_hits == 2:
+                if self.boat5_hits == 5:
                     return [True, True]
             return [True, False]
         else:
