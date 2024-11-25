@@ -18,8 +18,9 @@ class EnemyBoard:
         self.enemy_attempts = []
 
     def check_game_over(self):
-        if self.boat2_hits == 0 and self.boat3_hits == 0 and self.boat4_hits == 0 and self.boat5_hits == 0:
+        if self.boat2_hits == 2 and self.boat3_hits == 3 and self.boat4_hits == 4 and self.boat5_hits == 5:
             return True
+        
 
     def taking_a_hit(self, coor):
         #Hitting an enemy's board, returns True it there is a hit, returns False if it is a miss.
@@ -28,15 +29,23 @@ class EnemyBoard:
             self.board[coor[0]][coor[1]] = "X"
             if coor in self.boat2_pos:
                 self.boat2_hits += 1
+                if self.boat2_hits == 2:
+                    return [True, True]
             elif coor in self.boat3_pos:
                 self.boat3_hits += 1
+                if self.boat3_hits == 2:
+                    return [True, True]
             elif coor in self.boat4_pos:
                 self.boat4_hits += 1
+                if self.boat4_hits == 2:
+                    return [True, True]
             elif coor in self.boat5_pos:
                 self.boat5_hits += 1
-            return True
+                if self.boat5_hits == 2:
+                    return [True, True]
+            return [True, False]
         else:
-            return False
+            return [False, False]
 
     def create_board(self):
         #Creating the board
