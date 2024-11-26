@@ -2,6 +2,7 @@ from random import randint
 
 class EnemyBoard:
     def __init__(self) -> None:
+        self.translate = {0:"A", 1:"B", 2:"C", 3:"D", 4:"E", 5:"F", 6:"G", 7:"H", 8:"I", 9:"J"}
         self.board = []
         self.boat2_pos = []
         self.boat2_hits = 0
@@ -45,12 +46,13 @@ class EnemyBoard:
                     return [True, True]
             return [True, False]
         else:
+            self.board[coor[0]][coor[1]] = "M"
             return [False, False]
 
     def create_board(self):
         #Creating the board
         for _ in range(10):
-            self.board.append([0]*10)
+            self.board.append(["0"]*10)
 
     def place_boats(self):
         #Get random starting position
@@ -92,18 +94,18 @@ class EnemyBoard:
         #Boat 5 position
         self.boat5_pos = get_boat_pos(5)
         self.all_boats_pos = self.all_boats_pos + self.boat5_pos
-        for c in self.boat2_pos:
-            self.board[c[0]][c[1]] = 2
-        for c in self.boat3_pos:
-            self.board[c[0]][c[1]] = 3
-        for c in self.boat4_pos:
-            self.board[c[0]][c[1]] = 4
-        for c in self.boat5_pos:
-            self.board[c[0]][c[1]] = 5
+        # for c in self.boat2_pos:
+        #     self.board[c[0]][c[1]] = "2"
+        # for c in self.boat3_pos:
+        #     self.board[c[0]][c[1]] = "3"
+        # for c in self.boat4_pos:
+        #     self.board[c[0]][c[1]] = "4"
+        # for c in self.boat5_pos:
+        #     self.board[c[0]][c[1]] = "5"
     def print_board(self):
-        print("   A  B  C  D  E  F  G  H  I  J")
+        print("    1    2    3    4    5    6    7    8    9    10")
         for i in range(len(self.board)):
-            print(f"{i} {self.board[i]}")
+            print(f"{self.translate[i]} {self.board[i]}")
 
 ###Testing Board Creation
 # again = True

@@ -25,11 +25,19 @@ while testing:
         if check[0]:
             print("Hit")
         response = test.response(response, check[0], check[1])
-    print(f"Next hit is {response}")
-    print(test.attempted_coor)
+    for x in test.attempted_coor:
+        if 0 <= x[0] <= 9 or 0 <= x[1] <= 9:
+            pass
+        else:
+            print("Error")
+    #print(test.attempted_coor)
     board.print_board()
     
 
     r = input("Stop? ")
-    if r == "y":
+    if r == "y" or board.check_game_over():
+        print("Game is finished")
         testing = False
+
+
+
