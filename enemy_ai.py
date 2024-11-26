@@ -103,6 +103,7 @@ class EnemyAI:
             self.last_hit = pos
             next_hit = continue_direction()
         elif self.dfs:
+            #TODO: Move up to second elif to make game harder.
             #print("DFS")
             self.last_hit = pos
             next_hit = dfs()
