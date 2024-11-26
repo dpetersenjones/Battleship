@@ -84,24 +84,28 @@ class PlayerBoard:
             return True
 
         #Boat 2 placement
+        print("Boat 2")
         self.boat2_pos = get_placement(2)
         self.all_boats_coor += self.boat2_pos
         for c in self.boat2_pos:
             self.board[c[0]][c[1]] = "2"
         self.print_board()
         #Boat 3 placement
+        print("Boat 3")
         self.boat3_pos = get_placement(3)
         self.all_boats_coor += self.boat3_pos
         for c in self.boat3_pos:
             self.board[c[0]][c[1]] = "3"
         self.print_board()
         #Boat 4 placement
+        print("Boat 4")
         self.boat4_pos = get_placement(4)
         self.all_boats_coor += self.boat4_pos
         for c in self.boat4_pos:
             self.board[c[0]][c[1]] = "4"
         self.print_board()
         #Boat 5 Placement
+        print("Boat 5")
         self.boat5_pos = get_placement(5)
         self.all_boats_coor += self.boat5_pos
         for c in self.boat5_pos:
