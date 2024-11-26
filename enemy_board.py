@@ -102,6 +102,8 @@ class EnemyBoard:
         #     self.board[c[0]][c[1]] = "4"
         # for c in self.boat5_pos:
         #     self.board[c[0]][c[1]] = "5"
+
+        
     def print_board(self):
         print("    1    2    3    4    5    6    7    8    9    10")
         for i in range(len(self.board)):
