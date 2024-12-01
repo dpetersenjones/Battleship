@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href=".\html\style.css" rel="stylesheet"> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+    <h1><strong>Battleship</strong></h1>
+    <div class="grid-holders" >
+        <div class="grid-container" style="background-image: url('../static/assets/img/ocean-background.png');">
+            {% for i in range(10) %}
+                {% for j in range(10) %}
+                    <div class="grid-item"></div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        <div class="grid-container" style="background-image: url('../static/assets/img/ocean-background.png');">
+            {% for i in range(10) %}
+                {% for j in range(10) %}
+                    <div class="grid-item"></div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>
