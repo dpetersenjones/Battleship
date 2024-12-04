@@ -5,15 +5,17 @@
     width: 48%;
 }
 
+
+body {
+    background-image: '../static/assets/img/pattern_waves.png';
+}
+
 h1 {
     color: red;
     text-align: center;
     width: 100%;
 }
 
-body {
-    background-color: #7CD7F7;
-}
 
 .grid-item {
     text-align: center;
@@ -53,6 +55,7 @@ body {
 
     
 }
+
 
 .first-row {}
 
