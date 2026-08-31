@@ -31,23 +31,23 @@ class EnemyBoard:
             if coor in self.boat2_pos:
                 self.boat2_hits += 1
                 if self.boat2_hits == 2:
-                    return [True, True]
+                    return {'boat_hit':True, 'boat_sunk':True}
             elif coor in self.boat3_pos:
                 self.boat3_hits += 1
                 if self.boat3_hits == 3:
-                    return [True, True]
+                    return {'boat_hit':True, 'boat_sunk':True}
             elif coor in self.boat4_pos:
                 self.boat4_hits += 1
                 if self.boat4_hits == 4:
-                    return [True, True]
+                    return {'boat_hit':True, 'boat_sunk':True}
             elif coor in self.boat5_pos:
                 self.boat5_hits += 1
                 if self.boat5_hits == 5:
-                    return [True, True]
-            return [True, False]
+                    return {'boat_hit':True, 'boat_sunk':True}
+            return {'boat_hit':True, 'boat_sunk':False}
         else:
             self.board[coor[0]][coor[1]] = "M"
-            return [False, False]
+            return {'boat_hit':False, 'boat_sunk':False}
 
     def create_board(self):
         #Creating the board
