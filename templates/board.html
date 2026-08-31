@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href=".\html\style.css" rel="stylesheet"> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+
+</head>
+<body style="background-image: url('../static/assets/img/pattern_waves.png');">
+    <h1><strong>Battleship</strong></h1>
+    <div class="grid-holders" >
+        <div class="grid-container" style="background-image: url('../static/assets/img/ocean-background.png');">
+            {% for i in range(10) %}
+                {% for j in range(10) %}
+                    <div class="grid-item" id="{{[i, j]}}"></div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        <div class="grid-container" style="background-image: url('../static/assets/img/ocean-background.png');">
+            {% for i in range(10) %}
+                {% for j in range(10) %}
+                    <div class="grid-item"></div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="grid-holders">
+        <div class="empty"></div>
+        <div class="ship-grid">
+            <div class="lable first-row">2 ship</div>
+            <div class="ship-2"><img class="ship-img" src='./static/assets/img/battleship-1.png' alt="boat of with a length of 2"></div>
+            <!-- <div class="ship-2" style='background-image: url("./static/assets/img/battleship-1.png");'></div> -->
+            <div class="lable second-row">3 ship</div>
+            <div class="ship-3 "><img class="ship-img" src='./static/assets/img/battleship-1.png' alt="boat of with a length of 3"></div>
+            <!-- <div class="ship-3" style='background-image: url("./static/assets/img/battleship-1.png");'></div> -->
+            <div class="lable third-row">4 ship</div>
+            <div class="ship-4 "><img class="ship-img" src='./static/assets/img/battleship-2.png' alt="boat of with a length of 4"></div>
+            <div class="lable fourth-row">5 ship</div>
+            <div class="ship-5 "><img class="ship-img" src='./static/assets/img/battleship-2.png' alt="boat of with a length of 5"></div>
+        </div>
+    </div>
+</body>
+<script src="./static/js/index.js"></script>
+</html>
